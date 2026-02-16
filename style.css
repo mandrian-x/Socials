@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation: moveStars 140s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 2500px 2500px; }
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 500px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 9999;
+}
+
+.top-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.top-btn i {
+  font-size: 18px;
+  color: white;
+}
+
+.top-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255,255,255,0.18);
+}
+
+.container {
+  max-width: 500px;
+  margin: 110px auto 60px auto;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.profile {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #b8b8b8;
+  margin-bottom: 35px;
+}
+
+.mini-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.mini-icons a {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  aspect-ratio: 1 / 1;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.mini-icons i {
+  font-size: 18px;
+  color: white;
+  line-height: 1;
+}
+
+.mini-icons a:hover {
+  transform: scale(1.15);
+  background: rgba(255,255,255,0.15);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.link-card {
+  position: relative;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  padding: 18px 24px 18px 80px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.logo-circle {
+  position: absolute;
+  left: 14px;
+  width: 44px;
+  height: 44px;
+  aspect-ratio: 1 / 1;
+  background: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-circle i {
+  font-size: 18px;
+  color: white;
+}
+
+.link-card span {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.link-card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #2a2a2a, #383838);
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 100px;
+  }
+
+  .link-card {
+    padding: 16px 20px 16px 75px;
+  }
+}
